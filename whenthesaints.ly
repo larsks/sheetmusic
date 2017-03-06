@@ -24,7 +24,7 @@ trumpet_notes = \relative c' {
     c4. c8 e4 g8 g |
     g f r2 e8 f |
     g4 g a b |
-    c8. g16[ g8 g] c4 c,-> \bar "|."
+    c8. g16[ g8 g] c4 c,\staccato-> \bar "|."
 }
 
 Trumpet = \new Voice {
@@ -43,7 +43,7 @@ trombone_notes = \relative c {
     c4 g' c, g' |
     f c' f, r4 |
     g4 g f d |
-    c r2 c4-> \bar "|."
+    c r2 c4\staccato-> \bar "|."
 }
 
 Trombone = \new Voice {
@@ -67,6 +67,7 @@ Trombone = \new Voice {
 % produce playable midi score that *does not* transpose the trombone
 % score.
 \score {
+
     \new StaffGroup <<
         \new Staff << \global \Trumpet >>
         \new Staff << \global \Trombone >>

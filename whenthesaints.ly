@@ -8,7 +8,9 @@ global= {
 
 \header{
     title = "When the Saints Go Marching In"
+    subtitle = \markup {"For " B\flat "Trumpet and Trombone"}
     arranger = \markup \italic "arr. Lars Kellogg-Stedman"
+    composer = "Traditional"
 }
 
 trumpet_notes = \relative c' {
@@ -52,6 +54,8 @@ Trombone = \new Voice {
     \trombone_notes
 }
 
+% produce printed output with the trombone score transposed into
+% b-flat.
 \score {
     \new StaffGroup <<
         \new Staff << \global \Trumpet >>
@@ -60,6 +64,8 @@ Trombone = \new Voice {
     \layout { }
 }
 
+% produce playable midi score that *does not* transpose the trombone
+% score.
 \score {
     \new StaffGroup <<
         \new Staff << \global \Trumpet >>

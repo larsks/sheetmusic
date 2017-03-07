@@ -1,7 +1,7 @@
 \version "2.18.2"
 \language "english"
 
-global= {
+global = {
     \time 4/4
     \tempo "Lively" 4 = 120
 }
@@ -32,9 +32,11 @@ trumpet_notes = \relative c' {
       }
       {
 	g4 g a b |
-	c8. g16[ g8 g] c4 c,\staccato->
+	c8.\noBeam g16 g8[ g] c4 c,\staccato->
       }
     }
+
+    \bar "|."
 }
 
 Trumpet = \new Voice {
@@ -57,7 +59,7 @@ trombone_notes = \relative c {
     }
     \alternative {
       {
-	g4 g f d |
+	g4 e e d |
 	c2 r2
       }
       {
@@ -65,6 +67,8 @@ trombone_notes = \relative c {
 	c r2 c4\staccato->
       }
     }
+
+    \bar "|."
 }
 
 Trombone = \new Voice {
@@ -90,8 +94,8 @@ Trombone = \new Voice {
 \score {
 
     \new StaffGroup <<
-        \new Staff << \global \Trumpet >>
-        \new Staff << \global \Trombone >>
+        \new Staff << \global \unfoldRepeats \Trumpet >>
+        \new Staff << \global \unfoldRepeats \Trombone >>
     >>
     \midi { }
 }

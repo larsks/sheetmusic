@@ -11,6 +11,15 @@ global = {
     subtitle = \markup {"For " B\flat "Trumpet and Trombone"}
     arranger = \markup \italic "arr. Lars Kellogg-Stedman"
     composer = "Traditional"
+    copyright = \markup {
+      "Licensed under the terms of the Creative Commons "
+      "Attribution-ShareAlike 4.0 International Public License "
+    }
+    tagline = \markup {
+      "(Sources available from "
+      \bold "https://github.com/larsks/sheetmusic/"
+      ")"
+    }
 }
 
 trumpet_notes = \relative c' {

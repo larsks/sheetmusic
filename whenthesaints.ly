@@ -17,14 +17,24 @@ trumpet_notes = \relative c' {
     \key c \major
 
     r8 r2  c8 e[ f] |
-    g r2 c,8 e[ f] |
-    g r2 c,8 e[ f] |
-    g4 e c e |
-    d2 r8 e8 e[ d] |
-    c4. c8 e4 g8 g |
-    g f r2 e8 f |
-    g4 g a b |
-    c8. g16[ g8 g] c4 c,\staccato-> \bar "|."
+    \repeat volta 2 {
+      g r2 c,8 e[ f] |
+      g r2 c,8 e[ f] |
+      g4 e c e |
+      d2 r8 e8 e[ d] |
+      c4. c8 e4 g8 g |
+      g f r2 e8 f |
+    }
+    \alternative {
+      {
+	g4 e c d |
+	c2 r8 c e[ f] |
+      }
+      {
+	g4 g a b |
+	c8. g16[ g8 g] c4 c,\staccato->
+      }
+    }
 }
 
 Trumpet = \new Voice {
@@ -35,15 +45,26 @@ Trumpet = \new Voice {
 
 trombone_notes = \relative c {
     \key c \major
+
     r1 |
-    r8 c8 e[ f] g r4. |
-    r8 c,8 e[ f] g r4. |
-    g4 g c, c |
-    d8 c b a g r4. |
-    c4 g' c, g' |
-    f c' f, r4 |
-    g4 g f d |
-    c r2 c4\staccato-> \bar "|."
+    \repeat volta 2 {
+      r8 c8 e[ f] g r4. |
+      r8 c,8 e[ f] g r4. |
+      g4 g c, c |
+      d8 c b a g r4. |
+      c4 g' c, g' |
+      f c' f, r4 |
+    }
+    \alternative {
+      {
+	g4 g f d |
+	c2 r2
+      }
+      {
+	g'4 g f d |
+	c r2 c4\staccato->
+      }
+    }
 }
 
 Trombone = \new Voice {

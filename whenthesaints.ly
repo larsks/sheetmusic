@@ -25,7 +25,7 @@ global = {
 trumpet_notes = \relative c' {
     \key c \major
 
-    r8 r2  c8 e[ f] |
+    \partial 4.  c8 e[ f] |
     \repeat volta 2 {
       g r2 c,8 e[ f] |
       g r2 c,8 e[ f] |
@@ -57,7 +57,7 @@ Trumpet = \new Voice {
 trombone_notes = \relative c {
     \key c \major
 
-    r1 |
+    r4. |
     \repeat volta 2 {
       r8 c8 e[ f] g r4. |
       r8 c,8 e[ f] g r4. |

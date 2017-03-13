@@ -1,4 +1,6 @@
-SRCMUSIC = whenthesaints.ly
+SRCMUSIC = \
+	   whenthesaints.ly \
+	   cantina-band.ly
 PDFMUSIC = $(SRCMUSIC:.ly=.pdf)
 MIDIMUSIC = $(SRCMUSIC:.ly=.midi)
 

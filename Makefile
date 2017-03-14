@@ -3,8 +3,13 @@ SRCMUSIC = \
 	   cantina-band.ly
 PDFMUSIC = $(SRCMUSIC:.ly=.pdf)
 MIDIMUSIC = $(SRCMUSIC:.ly=.midi)
+PSSOURCE = $(SRCMUSIC:.ly=.ly.ps)
 
 LILYPOND = lilypond
+ENSCRIPT = enscript
+
+%.ly.ps: %.ly
+	$(ENSCRIPT) --highlight=ly -G -o $@ $<
 
 %.pdf: %.ly
 	$(LILYPOND) $<
@@ -14,5 +19,7 @@ LILYPOND = lilypond
 
 all: $(PDFMUSIC)
 
+ps: $(PSSOURCE)
+
 clean:
-	rm -f $(PDFMUSIC) $(MIDIMUSIC)
+	rm -f $(PDFMUSIC) $(MIDIMUSIC) $(PSSOURCE)

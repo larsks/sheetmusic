@@ -26,7 +26,7 @@ global = {
 trumpet_notes = \relative c' {
     \key f \major
 
-    a'4 d a d |
+    a'4\f d a d |
     a8 d4 a8 ~ a gs a4 |
     a8 gs a g r8 fs g fs |
     f4. d r4 |
@@ -55,22 +55,22 @@ Trumpet = \new Voice {
 trombone_notes = \relative c {
     \key f \major
 
-    d4 a' a, a' |
+    d4\mp a' a, a' |
     d,4 a' a, a' |
     d,4 a' a, a' |
-    d, c bf a |
-    d4 a' a, a' |
+    d,\f c bf a |
+    d4\mp a' a, a' |
     d,4 a' a, a' |
     g,4 g' b, f' |
-    c d ds e |
-    d4 a' a, a' |
+    c\f d ds e |
+    d4\mp a' a, a' |
     d,4 a' a, a' |
     c, e g, e' |
     d4 a' a, a' |
     bf,4 r b r |
     c r d r |
     e4 r a r |
-    f,1
+    f,1\ff
 
     \bar "|."
 }

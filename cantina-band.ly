@@ -3,13 +3,13 @@
 
 global = {
     \time 4/4
-    \tempo "Lively" 4 = 120
+    \tempo 4 = 190
 }
 
 \header{
     title = "Cantina Band"
     subtitle = \markup {"For " B\flat "Trumpet and Trombone"}
-    arranger = \markup \italic "arr. Daniel Jensen"
+    arranger = \markup \italic "arr. Daniel Jensen/Lars Kellogg-Stedman"
     composer = "John Williams"
     copyright = \markup {
       "Licensed under the terms of the Creative Commons "
@@ -32,8 +32,15 @@ trumpet_notes = \relative c' {
     a'4 d a d |
     a8 d4 a8( a) gs a4 |
     g g4. fs8 g4 |
-    c bf a g |
+    c-. bf-. a-. g-. |
     a d a d |
+    a8 d4 a8( a) gs a4 |
+    c4 c( c8) a g r8 |
+    f4. r8 d4. r8 |
+    d2 f |
+    a2 c |
+    ef4 d gs,8 a4. |
+    f4
 
     \bar "|."
 }
@@ -45,29 +52,46 @@ Trumpet = \new Voice {
 }
 
 trombone_notes = \relative c {
-    \key c \major
+    \key f \major
+
+    d4 a' a, a' |
+    d,4 a' a, a' |
+    d,4 a' a, a' |
+    d, c bf a |
+    d4 a' a, a' |
+    d,4 a' a, a' |
+    g,4 g' b, a' |
+    c, d ds e |
+    d4 a' a, a' |
+    d,4 a' a, a' |
+    c, e g, e' |
+    d4 a' a, a' |
+    bf,2_"(not so sure about this)" cs2 |
+    f2 a2 |
+    e4 r a r |
+    f4
 
     \bar "|."
 }
 
 Trombone = \new Voice {
     \clef bass
-    \key c \major
     \set Staff.instrumentName = #"Trombone "
     \set Staff.midiInstrument = #"trombone"
     \trombone_notes
 }
 
-% produce printed output with the trombone score transposed into
+% produce printed output with the trumpet score transposed into
 % b-flat.
 \score {
     \new StaffGroup <<
-        \new Staff << \global \Trumpet >>
+        \new Staff << \global \transpose bf c' \Trumpet >>
+        \new Staff << \global \Trombone >>
     >>
     \layout { }
 }
 
-% produce playable midi score that *does not* transpose the trombone
+% produce playable midi score that *does not* transpose the trumpet
 % score.
 \score {
 

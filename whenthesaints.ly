@@ -1,5 +1,6 @@
 \version "2.18.2"
 \language "english"
+\include "articulate.ly"
 
 global = {
     \time 4/4
@@ -102,7 +103,7 @@ Trombone = \new Voice {
 % score.
 \score {
 
-    \new StaffGroup <<
+    \articulate <<
         \new Staff << \global \unfoldRepeats \Trumpet >>
         \new Staff << \global \unfoldRepeats \Trombone >>
     >>

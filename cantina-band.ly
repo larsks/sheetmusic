@@ -95,9 +95,12 @@ Trombone = \new Voice {
 % produce playable midi score that *does not* transpose the trumpet
 % score.
 \score {
-    \new StaffGroup \articulate <<
+    \articulate <<
         \new Staff << \global \unfoldRepeats \articulate \Trumpet >>
         \new Staff << \global \unfoldRepeats \articulate \Trombone >>
     >>
     \midi { }
 }
+
+% original arrangement:
+% https://musescore.com/user/2180641/scores/2203846

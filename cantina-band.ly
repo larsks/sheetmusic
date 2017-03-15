@@ -85,7 +85,7 @@ Trombone = \new Voice {
 % produce printed output with the trumpet score transposed into
 % b-flat.
 \score {
-    \new StaffGroup <<
+    <<
         \new Staff << \global \transpose bf c' \Trumpet >>
         \new Staff << \global \Trombone >>
     >>

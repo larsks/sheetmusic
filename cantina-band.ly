@@ -3,8 +3,8 @@
 \include "articulate.ly"
 
 global = {
-    \time 4/4
-    \tempo 4 = 190
+    \time 2/2
+    \tempo 4 = 180
 }
 
 \header{

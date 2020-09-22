@@ -1,6 +1,8 @@
 SRCMUSIC = \
 	   whenthesaints.ly \
-	   cantina-band.ly
+	   cantina-band.ly \
+	   ultimate-warmup.ly
+
 PDFMUSIC = $(SRCMUSIC:.ly=.pdf)
 MIDIMUSIC = $(SRCMUSIC:.ly=.midi)
 PSSOURCE = $(SRCMUSIC:.ly=.ly.ps)

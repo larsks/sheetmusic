@@ -23,7 +23,7 @@ global = {
 \relative c {
     \key c \major
     \clef bass
-    \compressFullBarRests
+    \compressEmptyMeasures
     \set Score.markFormatter = #format-mark-box-alphabet
 
     R1*2

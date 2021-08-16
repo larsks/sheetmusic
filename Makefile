@@ -1,7 +1,8 @@
 SRCMUSIC = \
 	   whenthesaints.ly \
 	   cantina-band.ly \
-	   ultimate-warmup.ly
+	   ultimate-warmup.ly \
+	   muppet-theme.ly
 
 PDFMUSIC = $(SRCMUSIC:.ly=.pdf)
 MIDIMUSIC = $(SRCMUSIC:.ly=.midi)

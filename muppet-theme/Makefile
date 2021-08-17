@@ -19,7 +19,7 @@ ENSCRIPT = enscript
 %.midi: %.ly
 	$(LILYPOND) $<
 
-all: $(PDFMUSIC)
+all: $(PDFMUSIC) $(MIDIMUSIC)
 
 ps: $(PSSOURCE)
 

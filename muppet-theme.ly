@@ -2,9 +2,17 @@
 \language "english"
 \include "articulate.ly"
 
+\paper {
+    left-margin=0.5\in
+}
+
 global = {
+    \key c \major
     \time 4/4
     \tempo "Ragtime" 4 = 180
+
+    \set Score.markFormatter = #format-mark-box-alphabet
+    \override Score.BarNumber.break-visibility = ##(#t #t #t)
 }
 
 \header{
@@ -24,9 +32,7 @@ global = {
 }
 
 trumpet_notes = \relative c' {
-    \key c \major
-    \set Score.markFormatter = #format-mark-box-alphabet
-    \override Score.BarNumber.break-visibility = ##(#t #t #t)
+    \global
 
     \mark \default
     c4 c8 c r a( c4) |
@@ -53,7 +59,7 @@ trumpet_notes = \relative c' {
     r4 e e g | f e8 f~ f c' c, d |
     e4 e8 e~ e d c4
 
-    R1*10
+    R1*9
 
     \mark \default
     r4 c' c a | b as8 b8~ b4 g |
@@ -67,10 +73,7 @@ trumpet_notes = \relative c' {
 }
 
 saxophone_notes = \relative c' {
-    \key c \major
-    \set Score.markFormatter = #format-mark-box-alphabet
-    \override Score.BarNumber.break-visibility = ##(#t #t #t)
-
+    \global
 
     \mark \default
     f4 r2. | ds4 r2. | d4 r2. | c4\staccato c d e |
@@ -101,7 +104,7 @@ saxophone_notes = \relative c' {
     c4( d c b | d e g,) r |
     g a^( a8) b4^( b8) | c4 d r2 |
     
-    R1*7
+    R1*6
 
     r4 e, e g | f e8 f~ f c' r4 |
     r4 e, e g | f e8 f~ f c' c, d |
@@ -119,7 +122,7 @@ Trumpet = \new Voice {
 
 Saxophone = \new Voice {
     \key c \major
-    \set Staff.instrumentName = #"Alto Saxophone"
+    \set Staff.instrumentName = #"Alt. Saxophone"
     \set Staff.shortInstrumentName = #"A Sax"
     \set Staff.midiInstrument = #"alto sax"
     \saxophone_notes

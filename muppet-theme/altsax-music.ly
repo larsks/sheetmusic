@@ -30,11 +30,16 @@ altsax_music = \relative c' {
     c4( d c b | d e g,) r |
     g a^( a8) b4^( b8) | c4 d r2 |
     
-    R1*6
+    \mark \default
+    R1*5
 
+    \mark \default
+    R1
     r4 e, e g | f e8 f~ f c' r4 |
     r4 e, e g | f e8 f~ f c' c, d |
-    c4 c8 c4 a8 c4 | e4 e8 e4 c8 e4 |
-    a4 a8 a4 e8 a4 | c2
+
+    \mark \default
+    c4\< c8 c4 a8 c4 | e4 e8 e4 c8 e4 |
+    a4 a8 a4 e8 a4 | c2\!
     c,2 d e f g g g g c~ | c2. c,4
 }

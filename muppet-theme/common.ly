@@ -10,7 +10,6 @@ global = {
     \tempo "Ragtime" 4 = 180
 
     \set Score.markFormatter = #format-mark-box-alphabet
-    \override Score.BarNumber.break-visibility = ##(#t #t #t)
 }
 
 \header{
